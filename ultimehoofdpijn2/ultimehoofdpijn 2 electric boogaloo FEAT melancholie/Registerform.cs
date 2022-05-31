@@ -30,7 +30,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                 string accountadmin = "0";
                 string accountMoney = "50";
                 AccountsList.Add(new Accounts(accountName, accountPassword, accountadmin, accountMoney, accountemail));
-                MessageBox.Show("Account voor" + accountName + " gemaakt");
+                MessageBox.Show("Account voor " + accountName + " gemaakt");
                 MainForm frmMain = new MainForm(accountName, accountadmin, accountMoney);
                 frmMain.Show();
                 this.Close();
