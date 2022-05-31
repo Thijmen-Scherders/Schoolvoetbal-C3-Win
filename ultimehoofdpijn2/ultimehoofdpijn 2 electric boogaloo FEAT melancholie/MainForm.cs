@@ -16,7 +16,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         public bool team2;
         public bool gelijk;
         //^^^^^^^^^teamkeuze^^^^^^^^^
-        public bool Team1Win = false;
+        public bool Team1Win = true;
         public bool Team2Win = false;
         public bool Gelijkspel = false;
         //^^^^^^^^^teamwin^^^^^^^^^^^
