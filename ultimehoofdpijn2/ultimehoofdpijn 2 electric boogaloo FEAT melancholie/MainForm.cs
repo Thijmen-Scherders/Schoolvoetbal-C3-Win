@@ -136,7 +136,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                 lblC3coins.Text = C3coin.ToString();
                 lblHoeveelheid.Text = "niks";
                 lblTeam.Text = "niemand";
-                MessageBox.Show("Team 1 hebt gewonnen! Jij hebt" + " " + winnings+ " " + "C3 coins gewonnen!" );
+                MessageBox.Show("Team 1 hebt gewonnen! Jij hebt " + winnings + " C3 coins gewonnen!" );
             }
             else if (team2 && Team2Win)
             {
@@ -148,7 +148,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                 lblC3coins.Text = C3coin.ToString();
                 lblHoeveelheid.Text = "niks";
                 lblTeam.Text = "niemand";
-                MessageBox.Show("Team 2 hebt gewonnen! Jij hebt" + " " + winnings + " " + "C3 coins gewonnen!");
+                MessageBox.Show("Team 2 hebt gewonnen! Jij hebt " + winnings + " C3 coins gewonnen!");
             }
             else if (gelijk && Gelijkspel)
             {
@@ -160,7 +160,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                 lblC3coins.Text = C3coin.ToString();
                 lblHoeveelheid.Text = "niks";
                 lblTeam.Text = "niemand";
-                MessageBox.Show("Het is Gelijkspel! Jij hebt" + " " + winnings + " " + "C3 coins gewonnen!");
+                MessageBox.Show("Het is Gelijkspel! Jij hebt " + winnings + " C3 coins gewonnen!");
             }
             else
             {
