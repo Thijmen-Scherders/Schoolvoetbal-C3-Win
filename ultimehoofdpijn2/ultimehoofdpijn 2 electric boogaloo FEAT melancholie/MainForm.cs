@@ -54,6 +54,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 
         private void BtnBetting_Click(object sender, EventArgs e)
         {
+            this.Hide();
             if (investment > 0)
             {
                 C3coin = C3coin + investment;
@@ -103,6 +104,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                     lblTeam.Text = " ";
                 }
             }
+            this.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)
