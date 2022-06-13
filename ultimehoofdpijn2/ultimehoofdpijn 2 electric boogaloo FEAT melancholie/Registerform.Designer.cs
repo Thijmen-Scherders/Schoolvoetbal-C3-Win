@@ -36,6 +36,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.Txbemail = new System.Windows.Forms.TextBox();
             this.Txbpass = new System.Windows.Forms.TextBox();
             this.Btnregister = new System.Windows.Forms.Button();
+            this.Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -96,11 +97,22 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.Btnregister.UseVisualStyleBackColor = true;
             this.Btnregister.Click += new System.EventHandler(this.Btnregister_Click);
             // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(291, 99);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(103, 62);
+            this.Back.TabIndex = 7;
+            this.Back.Text = "Back ";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // Registerform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 96);
+            this.ClientSize = new System.Drawing.Size(449, 171);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.Btnregister);
             this.Controls.Add(this.Txbpass);
             this.Controls.Add(this.Txbemail);
@@ -124,5 +136,6 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         private System.Windows.Forms.TextBox Txbemail;
         private System.Windows.Forms.TextBox Txbpass;
         private System.Windows.Forms.Button Btnregister;
+        private System.Windows.Forms.Button Back;
     }
 }

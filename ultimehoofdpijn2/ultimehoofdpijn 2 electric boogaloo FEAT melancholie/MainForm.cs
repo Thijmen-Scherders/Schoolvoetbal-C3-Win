@@ -16,7 +16,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         public bool team2;
         public bool gelijk;
         //^^^^^^^^^teamkeuze^^^^^^^^^
-        public bool Team1Win = true;
+        public bool Team1Win = false;
         public bool Team2Win = false;
         public bool Gelijkspel = false;
         //^^^^^^^^^teamwin^^^^^^^^^^^
@@ -54,7 +54,6 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 
         private void BtnBetting_Click(object sender, EventArgs e)
         {
-            this.Hide();
             if (investment > 0)
             {
                 C3coin = C3coin + investment;
@@ -104,7 +103,6 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                     lblTeam.Text = " ";
                 }
             }
-            this.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -138,7 +136,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                 lblC3coins.Text = C3coin.ToString();
                 lblHoeveelheid.Text = "niks";
                 lblTeam.Text = "niemand";
-                MessageBox.Show("Team 1 hebt gewonnen! Jij hebt " + winnings + " C3 coins gewonnen!" );
+                MessageBox.Show("Team 1 hebt gewonnen! Jij hebt" + " " + winnings+ " " + "C3 coins gewonnen!" );
             }
             else if (team2 && Team2Win)
             {
@@ -150,7 +148,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                 lblC3coins.Text = C3coin.ToString();
                 lblHoeveelheid.Text = "niks";
                 lblTeam.Text = "niemand";
-                MessageBox.Show("Team 2 hebt gewonnen! Jij hebt " + winnings + " C3 coins gewonnen!");
+                MessageBox.Show("Team 2 hebt gewonnen! Jij hebt" + " " + winnings + " " + "C3 coins gewonnen!");
             }
             else if (gelijk && Gelijkspel)
             {
@@ -162,7 +160,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                 lblC3coins.Text = C3coin.ToString();
                 lblHoeveelheid.Text = "niks";
                 lblTeam.Text = "niemand";
-                MessageBox.Show("Het is Gelijkspel! Jij hebt " + winnings + " C3 coins gewonnen!");
+                MessageBox.Show("Het is Gelijkspel! Jij hebt" + " " + winnings + " " + "C3 coins gewonnen!");
             }
             else
             {

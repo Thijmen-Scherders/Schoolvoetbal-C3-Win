@@ -30,7 +30,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                 string accountadmin = "0";
                 string accountMoney = "50";
                 AccountsList.Add(new Accounts(accountName, accountPassword, accountadmin, accountMoney, accountemail));
-                MessageBox.Show("Account voor " + accountName + " gemaakt");
+                MessageBox.Show("Account voor" + accountName + " gemaakt");
                 MainForm frmMain = new MainForm(accountName, accountadmin, accountMoney);
                 frmMain.Show();
                 this.Close();
@@ -39,6 +39,13 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             {
                 MessageBox.Show("iets is er heel fout gegaan");
             }
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+           Form1 form = new Form1();
+            form.Show();
+            this.Close();
         }
     }
 }

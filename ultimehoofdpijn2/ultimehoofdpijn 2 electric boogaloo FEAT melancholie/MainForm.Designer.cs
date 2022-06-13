@@ -61,7 +61,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.lblC3coins.AutoSize = true;
             this.lblC3coins.Location = new System.Drawing.Point(93, 99);
             this.lblC3coins.Name = "lblC3coins";
-            this.lblC3coins.Size = new System.Drawing.Size(32, 16);
+            this.lblC3coins.Size = new System.Drawing.Size(34, 17);
             this.lblC3coins.TabIndex = 8;
             this.lblC3coins.Text = "coin";
             // 
@@ -80,7 +80,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(18, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 16);
+            this.label1.Size = new System.Drawing.Size(71, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "Uw heeft :";
             // 
@@ -89,7 +89,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(133, 99);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 16);
+            this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 13;
             this.label2.Text = "C3 coins";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -99,7 +99,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(18, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 16);
+            this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 14;
             this.label3.Text = "Hallo!";
             // 
@@ -108,7 +108,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.lblGebruiker.AutoSize = true;
             this.lblGebruiker.Location = new System.Drawing.Point(67, 20);
             this.lblGebruiker.Name = "lblGebruiker";
-            this.lblGebruiker.Size = new System.Drawing.Size(66, 16);
+            this.lblGebruiker.Size = new System.Drawing.Size(71, 17);
             this.lblGebruiker.TabIndex = 15;
             this.lblGebruiker.Text = "Gebruiker";
             // 
@@ -117,7 +117,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(18, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 16);
+            this.label4.Size = new System.Drawing.Size(196, 17);
             this.label4.TabIndex = 16;
             this.label4.Text = "En welcom bij de C3 Gok App!";
             // 
@@ -129,6 +129,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.BtnAdmin.TabIndex = 28;
             this.BtnAdmin.Text = "admin";
             this.BtnAdmin.UseVisualStyleBackColor = true;
+            this.BtnAdmin.Visible = false;
             this.BtnAdmin.Click += new System.EventHandler(this.BtnAdmin_Click);
             // 
             // lbltest
@@ -136,7 +137,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.lbltest.AutoSize = true;
             this.lbltest.Location = new System.Drawing.Point(89, 144);
             this.lbltest.Name = "lbltest";
-            this.lbltest.Size = new System.Drawing.Size(0, 16);
+            this.lbltest.Size = new System.Drawing.Size(0, 17);
             this.lbltest.TabIndex = 29;
             // 
             // label5
@@ -144,7 +145,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(18, 144);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 16);
+            this.label5.Size = new System.Drawing.Size(66, 17);
             this.label5.TabIndex = 30;
             this.label5.Text = "U heeft : ";
             // 
@@ -153,7 +154,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(126, 144);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 16);
+            this.label6.Size = new System.Drawing.Size(90, 17);
             this.label6.TabIndex = 31;
             this.label6.Text = "C3 coins op :";
             // 
@@ -162,7 +163,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.lblHoeveelheid.AutoSize = true;
             this.lblHoeveelheid.Location = new System.Drawing.Point(74, 144);
             this.lblHoeveelheid.Name = "lblHoeveelheid";
-            this.lblHoeveelheid.Size = new System.Drawing.Size(38, 16);
+            this.lblHoeveelheid.Size = new System.Drawing.Size(40, 17);
             this.lblHoeveelheid.TabIndex = 32;
             this.lblHoeveelheid.Text = "geen";
             // 
@@ -171,7 +172,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.lblTeam.AutoSize = true;
             this.lblTeam.Location = new System.Drawing.Point(222, 144);
             this.lblTeam.Name = "lblTeam";
-            this.lblTeam.Size = new System.Drawing.Size(59, 16);
+            this.lblTeam.Size = new System.Drawing.Size(62, 17);
             this.lblTeam.TabIndex = 33;
             this.lblTeam.Text = "niemand";
             // 

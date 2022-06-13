@@ -63,7 +63,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.lblOfAdmin.AutoSize = true;
             this.lblOfAdmin.Location = new System.Drawing.Point(205, 120);
             this.lblOfAdmin.Name = "lblOfAdmin";
-            this.lblOfAdmin.Size = new System.Drawing.Size(25, 16);
+            this.lblOfAdmin.Size = new System.Drawing.Size(27, 17);
             this.lblOfAdmin.TabIndex = 30;
             this.lblOfAdmin.Text = "OF";
             // 
@@ -92,7 +92,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 120);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 16);
+            this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 32;
             this.label1.Text = "Wie wint er:";
             // 
@@ -110,7 +110,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 268);
+            this.ClientSize = new System.Drawing.Size(824, 409);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnGelijkAdmin);
