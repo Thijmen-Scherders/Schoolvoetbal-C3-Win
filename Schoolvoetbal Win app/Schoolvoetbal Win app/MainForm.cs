@@ -27,9 +27,9 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         public int inv2;
         public int invG;
         public int typebet;
-        public MainForm(string accountName, string accountadmin, string accountMoney)
+        public MainForm(string accountName, string accountAdmin, string accountMoney)
         {
-            Admin = int.Parse(accountadmin);
+            Admin = int.Parse(accountAdmin);
             C3coin = int.Parse(accountMoney);
             InitializeComponent();
             lblC3coins.Text = C3coin.ToString();

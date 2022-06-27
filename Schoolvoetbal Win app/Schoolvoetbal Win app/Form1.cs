@@ -1,5 +1,6 @@
 ﻿using AccDing;
 using System;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +14,13 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 {
     public partial class Form1 : Form
     {
+        MySqlConnection connection;
+        const string connStr = "Server=localhost;Database=s4;Uid=root;Pwd=;";
         public Form1()
         {
             InitializeComponent();
-            Accounts account = new Accounts();
-            List<Accounts> AccountsList = new List<Accounts>();
+            connection = new MySqlConnection(connStr);
+            connection.Open();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -32,40 +35,68 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Accounts account = new Accounts();
-            List<Accounts> AccountsList = new List<Accounts>();
-            AccountsList.Add(new Accounts("admin", "admin", "1", "50", "admin@email.com"));
-            AccountsList.Add(new Accounts("kees", "Geheim123", "0", "50", "kees@plop.nl"));
-            bool loggedin = false;
-            string loginName = txbUsername.Text;
-            string loginPassword = txbPassword.Text;
+            MySqlParameter paramName;
+            MySqlParameter paramPassword;
+
+            string accountName = txbUsername.Text;
+            string accountPassword = txbPassword.Text;
 
             try
             {
-                foreach (var user in AccountsList)
+                paramName = new MySqlParameter("name", accountName);
+
+                string passwordHash = PasswordHelper.GetSha256Hash(accountPassword, PasswordHelper.Salt);
+                paramPassword = new MySqlParameter("password", passwordHash);
+
+                string getUser = $"SELECT * FROM users WHERE PASSWORD = @password AND name = @name;";
+
+                if (connection.State != ConnectionState.Open)
                 {
-                    string accountName = user.name.ToString();
-                    string accountPassword = user.password.ToString();
-                    string accountadmin = user.admin.ToString();
-                    string accountMoney = user.money.ToString();
-                    string accountemail = user.email.ToString();
-                    if (accountName == loginName && loginPassword == accountPassword)
-                    {
-                        loggedin = true;
-                        MainForm frmMain = new MainForm(accountName, accountadmin, accountMoney);
-                        frmMain.Show();
-                        this.Hide();
-                        break;
-                    }
+                    connection.Open();
+
                 }
-                if (loggedin == false)
+
+                MySqlCommand command = new MySqlCommand(getUser, connection);
+                command.Parameters.Add(paramPassword);
+                command.Parameters.Add(paramName);
+
+                MySqlDataReader reader = command.ExecuteReader();
+
+                string accountadmin = null;
+                string accountMoney = null;
+
+                bool loginSuccesful = false;
+                if (reader.Read())
                 {
-                    MessageBox.Show("Inlog fout");
+                    bool isAdmin = reader.GetBoolean("admin");
+                    accountadmin = reader.GetString("admin");
+                    accountMoney = "50";
+                    loginSuccesful = true;
                 }
+                reader.Close();
+
+
+
+                if (!loginSuccesful)
+                {
+                    throw new Exception("Incorrecte username of password");
+                }
+                else
+                {
+                    MainForm frmMain = new MainForm(accountName, accountadmin, accountMoney);
+                    frmMain.Show();
+                    this.Hide();
+                }
+
+
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("error");
+                MessageBox.Show("iets is er heel fout gegaan: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
