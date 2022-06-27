@@ -16,5 +16,10 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
