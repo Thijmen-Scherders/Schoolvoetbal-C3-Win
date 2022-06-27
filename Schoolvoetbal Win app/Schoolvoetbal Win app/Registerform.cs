@@ -83,7 +83,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                     throw new Exception("Geen rij toegevoegd");
                 }
 
-                string accountadmin = "0";
+                bool accountadmin = false;
                 string accountMoney = "50";
                 MessageBox.Show("Account voor " + accountName + " gemaakt");
                 MainForm frmMain = new MainForm(accountName, accountadmin, accountMoney);

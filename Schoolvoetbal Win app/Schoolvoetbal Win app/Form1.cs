@@ -62,14 +62,14 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 
                 MySqlDataReader reader = command.ExecuteReader();
 
-                string accountadmin = null;
+                bool accountadmin = false;
                 string accountMoney = null;
 
                 bool loginSuccesful = false;
+
                 if (reader.Read())
                 {
-                    bool isAdmin = reader.GetBoolean("admin");
-                    accountadmin = reader.GetString("admin");
+                    accountadmin = reader.GetBoolean("admin");
                     accountMoney = "50";
                     loginSuccesful = true;
                 }

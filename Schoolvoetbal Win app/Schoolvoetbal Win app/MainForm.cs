@@ -20,21 +20,21 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         public bool Team2Win = false;
         public bool Gelijkspel = false;
         //^^^^^^^^^teamwin^^^^^^^^^^^
-        private int Admin;
+        private bool Admin;
         int C3coin = 0;
         public int investment;
         public int inv1;
         public int inv2;
         public int invG;
         public int typebet;
-        public MainForm(string accountName, string accountAdmin, string accountMoney)
+        public MainForm(string accountName, bool accountAdmin, string accountMoney)
         {
-            Admin = int.Parse(accountAdmin);
+            Admin = accountAdmin;
             C3coin = int.Parse(accountMoney);
             InitializeComponent();
             lblC3coins.Text = C3coin.ToString();
             lblGebruiker.Text = accountName;
-            if (Admin == 1)
+            if (Admin == true)
             {
                 BtnAdmin.Visible = true;
             }            
