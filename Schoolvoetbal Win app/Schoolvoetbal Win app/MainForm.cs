@@ -172,5 +172,12 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                 MessageBox.Show("je hebt verloren");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Team frmteam = new Team();
+            frmteam.Show();
+            
+        }
     }
 }
