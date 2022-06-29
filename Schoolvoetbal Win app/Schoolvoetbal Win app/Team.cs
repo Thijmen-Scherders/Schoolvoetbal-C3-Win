@@ -28,9 +28,6 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.Close();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }
