@@ -30,7 +30,8 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+            //Request - Line = Method SP Request-URI SP HTTP-Version CRLF;
+            //Http request moet hier komen
         }
     }
 }
