@@ -48,8 +48,12 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                     {
                         var Json = await responce.Content.ReadAsStringAsync();
                         var myJArray = JArray.Parse(Json);
-                        Match deserializedProduct = JsonConvert.DeserializeObject<Match>(myJArray[0].ToString());
-                        label1.Text = deserializedProduct.team1_name;
+                        foreach (var jsonObject in myJArray)
+                        {
+                            Match deserializedProduct = JsonConvert.DeserializeObject<Match>(jsonObject.ToString());
+                            label1.Text += deserializedProduct.team2_name;
+
+                        }
                         return Json;
                     }
                     else
