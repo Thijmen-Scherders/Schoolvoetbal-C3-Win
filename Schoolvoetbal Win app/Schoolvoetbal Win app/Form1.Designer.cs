@@ -36,6 +36,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.test = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -43,7 +44,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 17);
+            this.label1.Size = new System.Drawing.Size(110, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Gebruikersnaam:";
             // 
@@ -52,7 +53,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(47, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 17);
+            this.label2.Size = new System.Drawing.Size(85, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Wachtwoord:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -103,11 +104,22 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // test
+            // 
+            this.test.Location = new System.Drawing.Point(48, 114);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(100, 34);
+            this.test.TabIndex = 7;
+            this.test.Text = "test";
+            this.test.UseVisualStyleBackColor = true;
+            this.test.Click += new System.EventHandler(this.test_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(310, 200);
+            this.Controls.Add(this.test);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
@@ -132,6 +144,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button test;
     }
 }
 

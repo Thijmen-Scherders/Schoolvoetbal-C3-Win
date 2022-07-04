@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Http;
+using Newtonsoft.Json.Linq;
 
 namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 {
@@ -121,5 +123,13 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         {
             this.Close();
         }
+
+        private void test_Click(object sender, EventArgs e)
+        {
+            testing test = new testing();
+            test.Show();
+            this.Hide();
+        }
     }
 }
+
