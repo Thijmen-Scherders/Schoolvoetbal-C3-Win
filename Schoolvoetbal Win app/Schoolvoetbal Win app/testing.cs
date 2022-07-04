@@ -51,7 +51,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                         foreach (var jsonObject in myJArray)
                         {
                             Match deserializedProduct = JsonConvert.DeserializeObject<Match>(jsonObject.ToString());
-                            label1.Text += deserializedProduct.id + " " ;
+                            listBox1.Items.Add(deserializedProduct.id + " " + deserializedProduct.team1_name + " " + deserializedProduct.team2_name);
                         }
                         return Json;
                     }
@@ -65,6 +65,11 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             {
                 return null;
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
