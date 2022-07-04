@@ -51,8 +51,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                         foreach (var jsonObject in myJArray)
                         {
                             Match deserializedProduct = JsonConvert.DeserializeObject<Match>(jsonObject.ToString());
-                            label1.Text += deserializedProduct.team2_name;
-
+                            label1.Text += deserializedProduct.id + " " ;
                         }
                         return Json;
                     }
