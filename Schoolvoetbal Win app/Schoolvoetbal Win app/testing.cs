@@ -18,9 +18,11 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         public testing()
         {
             InitializeComponent();
-            GetMatch("1");
-            //GetAllMatches();
-            
+            //GetMatch("1");
+            // GetAllMatches();
+            GetAllResults();
+
+
         }
 
         private void test_Load(object sender, EventArgs e)
@@ -57,7 +59,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 
                             if (deserializedProduct.finished == true)
                             {
-                                //HttpResponseMessage response = await Client.GetAsync($"/api/matches?match_id={deserializedProduct.id}");
+
                                 listBox1.Items.Add(deserializedProduct.team1_name + " VS " + deserializedProduct.team2_name);
                             }
                             else
@@ -91,7 +93,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                     Client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
 
-                    HttpResponseMessage responce = await Client.GetAsync("/api/matches");
+                    HttpResponseMessage responce = await Client.GetAsync("/api/results");
                     if (responce.IsSuccessStatusCode)
                     {
                         var Json = await responce.Content.ReadAsStringAsync();
@@ -102,8 +104,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 
                             if (deserializedProduct.finished == true)
                             {
-                                HttpResponseMessage response = await Client.GetAsync($"/api/matches?match_id={deserializedProduct.id}");
-                                listBox1.Items.Add(deserializedProduct.team1_name + " VS " + deserializedProduct.team2_name);
+                                listBox1.Items.Add(deserializedProduct.team1_name + " VS " + deserializedProduct.team2_name + " " + deserializedProduct.team1_score + " - " + deserializedProduct.team2_score);
                             }
                             else
                             {
@@ -125,7 +126,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         }
 
 
-        public async Task<string> GetMatch(string id)
+        public async Task<string> GetMatch(int id)
         {
             try
             {
@@ -140,14 +141,10 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                     {
                         var Json = await response.Content.ReadAsStringAsync();
                         
-                        Match match = JsonConvert.DeserializeObject<Match>(JObject.Parse(Json).ToString());
-                        bool run = true;
-                        while (run == true)
-                        {
-                            listBox1.Items.Add(match.team1_name);
-                            listBox2.Items.Add(match.team2_name);
-                            run = false;
-                        }
+                        Match match = JsonConvert.DeserializeObject<Match>(Json.ToString());
+
+
+                      
                             
                         return Json;
 

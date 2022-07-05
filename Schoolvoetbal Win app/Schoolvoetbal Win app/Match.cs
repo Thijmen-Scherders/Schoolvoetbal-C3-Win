@@ -16,5 +16,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         public string team2_name { get; set; }
 
         public bool finished { get; set; }
+        public int team1_score { get; set; }
+        public int team2_score { get; set; }
     }
 }
