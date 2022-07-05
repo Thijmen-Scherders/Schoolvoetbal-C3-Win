@@ -16,7 +16,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Loginform());
         }
     }
 }

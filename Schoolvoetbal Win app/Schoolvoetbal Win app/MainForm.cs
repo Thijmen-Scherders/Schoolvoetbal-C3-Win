@@ -47,7 +47,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         
         private void btnLogoff_Click(object sender, EventArgs e)
         {
-            Form1 frmLog = new Form1();
+            Loginform frmLog = new Loginform();
             frmLog.Show();
             this.Hide();
         }

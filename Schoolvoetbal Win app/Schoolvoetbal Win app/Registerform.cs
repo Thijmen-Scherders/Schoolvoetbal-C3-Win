@@ -15,7 +15,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
     public partial class Registerform : Form
     {
         MySqlConnection connection;
-        const string connStr = "Server=localhost;Database=s4;Uid=root;Pwd=;";
+        const string connStr = "Server=localhost;Database=c3_schoolvoetbal;Uid=root;Pwd=;";
         public Registerform()
         {
             InitializeComponent();
@@ -61,8 +61,8 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                     paramPassword = new MySqlParameter("password", accountPassword);
                 }
 
-                string insertUserQry = $"INSERT INTO users(NAME,email,PASSWORD) VALUES(@user, @email, @password);";
-                string updateUserQry = $"UPDATE users set NAME = @user, email = @email, password = @password where name = @name";
+                string insertUserQry = $"INSERT INTO users(name,email,password) VALUES(@user, @email, @password);";
+                string updateUserQry = $"UPDATE users set name = @user, email = @email, password = @password where name = @name";
 
 
                 MySqlCommand command = new MySqlCommand(insertUserQry, connection);
@@ -103,7 +103,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 
         private void Back_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+            Loginform form = new Loginform();
             form.Show();
             this.Close();
         }
