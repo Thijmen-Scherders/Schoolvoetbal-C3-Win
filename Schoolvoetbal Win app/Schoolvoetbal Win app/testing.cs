@@ -135,15 +135,12 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                     Client.DefaultRequestHeaders.Accept.Clear();
                     Client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                     HttpResponseMessage response = await Client.GetAsync($"/api/match?match_id={id}");
-                    listBox1.Items.Add("test");
-                    listBox2.Items.Add("test");
-
+F
                     if (response.IsSuccessStatusCode)
                     {
                         var Json = await response.Content.ReadAsStringAsync();
-                        var myJArray = JArray.Parse(Json);
-                        var matchJson = myJArray[0];
-                        Match match = JsonConvert.DeserializeObject<Match>(matchJson.ToString());
+                        
+                        Match match = JsonConvert.DeserializeObject<Match>(JObject.Parse(Json).ToString());
                         bool run = true;
                         while (run == true)
                         {
