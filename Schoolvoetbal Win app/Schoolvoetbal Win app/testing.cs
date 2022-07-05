@@ -18,6 +18,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         public testing()
         {
             InitializeComponent();
+            test();
         }
 
         private void test_Load(object sender, EventArgs e)
@@ -29,7 +30,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 
         private void button1_Click(object sender, EventArgs e)
         {
-            test();
+            
         }
 
         public async Task<string> test()
