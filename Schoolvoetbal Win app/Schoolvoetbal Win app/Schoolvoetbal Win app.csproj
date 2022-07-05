@@ -144,11 +144,11 @@
     <Compile Include="Team.Designer.cs">
       <DependentUpon>Team.cs</DependentUpon>
     </Compile>
-    <Compile Include="testing.cs">
+    <Compile Include="Overvieuw.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="testing.Designer.cs">
-      <DependentUpon>testing.cs</DependentUpon>
+    <Compile Include="Overvieuw.Designer.cs">
+      <DependentUpon>Overvieuw.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
@@ -178,8 +178,8 @@
     <EmbeddedResource Include="Team.resx">
       <DependentUpon>Team.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="testing.resx">
-      <DependentUpon>testing.cs</DependentUpon>
+    <EmbeddedResource Include="Overvieuw.resx">
+      <DependentUpon>Overvieuw.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

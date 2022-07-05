@@ -44,7 +44,8 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.lblHoeveelheid = new System.Windows.Forms.Label();
             this.lblTeam = new System.Windows.Forms.Label();
             this.BtnWinchecker = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Teamsbtn = new System.Windows.Forms.Button();
+            this.overvieuwbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogoff
@@ -124,7 +125,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             // 
             // BtnAdmin
             // 
-            this.BtnAdmin.Location = new System.Drawing.Point(232, 119);
+            this.BtnAdmin.Location = new System.Drawing.Point(270, 175);
             this.BtnAdmin.Name = "BtnAdmin";
             this.BtnAdmin.Size = new System.Drawing.Size(100, 34);
             this.BtnAdmin.TabIndex = 28;
@@ -187,22 +188,33 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             this.BtnWinchecker.UseVisualStyleBackColor = true;
             this.BtnWinchecker.Click += new System.EventHandler(this.BtnWinchecker_Click);
             // 
-            // button1
+            // Teamsbtn
             // 
-            this.button1.Location = new System.Drawing.Point(232, 82);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 32);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Teams";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Teamsbtn.Location = new System.Drawing.Point(232, 82);
+            this.Teamsbtn.Name = "Teamsbtn";
+            this.Teamsbtn.Size = new System.Drawing.Size(100, 32);
+            this.Teamsbtn.TabIndex = 35;
+            this.Teamsbtn.Text = "Teams";
+            this.Teamsbtn.UseVisualStyleBackColor = true;
+            this.Teamsbtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // overvieuwbtn
+            // 
+            this.overvieuwbtn.Location = new System.Drawing.Point(232, 121);
+            this.overvieuwbtn.Name = "overvieuwbtn";
+            this.overvieuwbtn.Size = new System.Drawing.Size(100, 32);
+            this.overvieuwbtn.TabIndex = 36;
+            this.overvieuwbtn.Text = "Overvieuw";
+            this.overvieuwbtn.UseVisualStyleBackColor = true;
+            this.overvieuwbtn.Click += new System.EventHandler(this.overvieuwbtn_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 211);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.overvieuwbtn);
+            this.Controls.Add(this.Teamsbtn);
             this.Controls.Add(this.BtnWinchecker);
             this.Controls.Add(this.lblTeam);
             this.Controls.Add(this.lblHoeveelheid);
@@ -243,6 +255,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         private System.Windows.Forms.Label lblHoeveelheid;
         private System.Windows.Forms.Label lblTeam;
         private System.Windows.Forms.Button BtnWinchecker;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Teamsbtn;
+        private System.Windows.Forms.Button overvieuwbtn;
     }
 }

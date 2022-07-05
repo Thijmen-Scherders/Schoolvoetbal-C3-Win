@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 {
-    public partial class testing : Form
+    public partial class Overvieuw : Form
     {
-        public testing()
+        public Overvieuw()
         {
             InitializeComponent();
             //GetMatch("1");
@@ -164,6 +164,12 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void backbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
 
         }
     }

@@ -126,9 +126,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
 
         private void test_Click(object sender, EventArgs e)
         {
-            testing test = new testing();
-            test.Show();
-            this.Hide();
+            
         }
     }
 }

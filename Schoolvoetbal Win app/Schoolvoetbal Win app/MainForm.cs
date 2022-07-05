@@ -49,7 +49,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         {
             Loginform frmLog = new Loginform();
             frmLog.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void BtnBetting_Click(object sender, EventArgs e)
@@ -178,6 +178,12 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             Team frmteam = new Team();
             frmteam.Show();
             
+        }
+
+        private void overvieuwbtn_Click(object sender, EventArgs e)
+        {
+            Overvieuw overvieuw = new Overvieuw();
+            overvieuw.Show();
         }
     }
 }
