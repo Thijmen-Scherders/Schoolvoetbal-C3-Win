@@ -18,7 +18,9 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
         public testing()
         {
             InitializeComponent();
-            test();
+            GetMatch("1");
+            //GetAllMatches();
+            
         }
 
         private void test_Load(object sender, EventArgs e)
@@ -33,7 +35,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
             
         }
 
-        public async Task<string> test()
+        public async Task<string> GetAllMatches()
         {
             try
             {
@@ -52,12 +54,110 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                         foreach (var jsonObject in myJArray)
                         {
                             Match deserializedProduct = JsonConvert.DeserializeObject<Match>(jsonObject.ToString());
-                            listBox1.Items.Add(deserializedProduct.id + " " + deserializedProduct.team1_name + " " + deserializedProduct.team2_name);
+
+                            if (deserializedProduct.finished == true)
+                            {
+                                //HttpResponseMessage response = await Client.GetAsync($"/api/matches?match_id={deserializedProduct.id}");
+                                listBox1.Items.Add(deserializedProduct.team1_name + " VS " + deserializedProduct.team2_name);
+                            }
+                            else
+                            {
+                                listBox2.Items.Add(deserializedProduct.team1_name + " VS " + deserializedProduct.team2_name);
+                            }
                         }
                         return Json;
                     }
                     else
                     {
+                        return null;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+
+        public async Task<string> GetAllResults()
+        {
+            try
+            {
+                using (var Client = new HttpClient())
+                {
+                    Client.BaseAddress = new Uri(TestURL);
+                    Client.DefaultRequestHeaders.Accept.Clear();
+                    Client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+
+                    HttpResponseMessage responce = await Client.GetAsync("/api/matches");
+                    if (responce.IsSuccessStatusCode)
+                    {
+                        var Json = await responce.Content.ReadAsStringAsync();
+                        var myJArray = JArray.Parse(Json);
+                        foreach (var jsonObject in myJArray)
+                        {
+                            Match deserializedProduct = JsonConvert.DeserializeObject<Match>(jsonObject.ToString());
+
+                            if (deserializedProduct.finished == true)
+                            {
+                                HttpResponseMessage response = await Client.GetAsync($"/api/matches?match_id={deserializedProduct.id}");
+                                listBox1.Items.Add(deserializedProduct.team1_name + " VS " + deserializedProduct.team2_name);
+                            }
+                            else
+                            {
+                                listBox2.Items.Add(deserializedProduct.team1_name + " VS " + deserializedProduct.team2_name);
+                            }
+                        }
+                        return Json;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+
+        public async Task<string> GetMatch(string id)
+        {
+            try
+            {
+                using (var Client = new HttpClient())
+                {
+                    Client.BaseAddress = new Uri(TestURL);
+                    Client.DefaultRequestHeaders.Accept.Clear();
+                    Client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                    HttpResponseMessage response = await Client.GetAsync($"/api/match?match_id={id}");
+                    listBox1.Items.Add("test");
+                    listBox2.Items.Add("test");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var Json = await response.Content.ReadAsStringAsync();
+                        var myJArray = JArray.Parse(Json);
+                        var matchJson = myJArray[0];
+                        Match match = JsonConvert.DeserializeObject<Match>(matchJson.ToString());
+                        bool run = true;
+                        while (run == true)
+                        {
+                            listBox1.Items.Add(match.team1_name);
+                            listBox2.Items.Add(match.team2_name);
+                            run = false;
+                        }
+                            
+                        return Json;
+
+                    }
+                    else
+                    {
+                        listBox2.Items.Add("failed");
                         return null;
                     }
                 }
