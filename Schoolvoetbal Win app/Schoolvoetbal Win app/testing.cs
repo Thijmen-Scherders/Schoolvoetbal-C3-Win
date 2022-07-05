@@ -135,7 +135,7 @@ namespace ultimehoofdpijn_2_electric_boogaloo_FEAT_melancholie
                     Client.DefaultRequestHeaders.Accept.Clear();
                     Client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                     HttpResponseMessage response = await Client.GetAsync($"/api/match?match_id={id}");
-F
+
                     if (response.IsSuccessStatusCode)
                     {
                         var Json = await response.Content.ReadAsStringAsync();
